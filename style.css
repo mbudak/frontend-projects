@@ -5,7 +5,8 @@
 }
 
 :root {
-    --primary-color: #d62828;
+    --primary-color: #023e8a;
+    --secondary-color: #a8dadc;
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -14,8 +15,6 @@ body {
 main {
     max-width: 920px;
     margin: 0 auto;
-    text-align: center;
-
 }
 a:link, a:visited {
     text-decoration: none;
@@ -34,4 +33,26 @@ nav a {
     border-right: 1px solid #444;
     background-color: #ddd;
     margin: 0 10px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.project-item {
+    border: 1px solid #444;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+.project-item a {
+    border: 1px solid #444;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    display: block;
+    background-color: #eee;
+    margin: 4px;
+    text-align: center;
 }
