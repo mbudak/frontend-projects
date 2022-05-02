@@ -27,7 +27,7 @@ nav a {
 text-align: center;
 padding: 14px 16px;
 text-decoration: none;
-font-size: 17px;
+font-size:1.2rem;
 }
 
 nav .logo {
@@ -103,6 +103,9 @@ visited {
 .div980 {
     display: block;   
     background-color: #e0aaff;
+}
+.contact-form {
+    width: auto;
 }
 
 input[type=text], input[type="email"], label, button {
@@ -225,7 +228,7 @@ textarea {
     }
     
     body {
-        background-color: green;
+        font-size: 0.7rem;
     }
 
     nav  {
