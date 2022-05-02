@@ -48,7 +48,7 @@ nav a {
 
 .project-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
 
@@ -56,6 +56,11 @@ nav a {
     border: 1px solid #444;
     padding: 0 10px;
     border-radius: 8px;
+    background-color: lightblue;
+}
+
+.project-item p {
+    height: 60px;
 }
 .project-item a {
     border: 1px solid #444;
