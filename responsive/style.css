@@ -104,6 +104,18 @@ visited {
     display: block;   
     background-color: #e0aaff;
 }
+
+input[type=text], input[type="email"], label, button {
+    display: block;
+    width: 80%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    box-sizing: border-box;  
+}
+textarea {
+    width: 80%;
+}
+
 @media screen and (max-width: 980px) {
     
     nav {
