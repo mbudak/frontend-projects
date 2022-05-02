@@ -89,7 +89,21 @@ visited {
     text-decoration: none;
 }
 
-
+.size-indicator {
+    display: block;
+    text-align: center;
+}
+.size-indicator > div {
+    height: 40px;
+    line-height: 40px;
+}
+.div640, .div768 {
+    display: none;
+}
+.div980 {
+    display: block;   
+    background-color: #e0aaff;
+}
 @media screen and (max-width: 980px) {
     
     nav {
@@ -159,6 +173,14 @@ visited {
 }
 
 @media screen and (max-width: 768px) {
+    .div640, .div980 {
+        display: none;
+    }
+    
+    .div768 {
+        display: block;   
+        background-color: #ee9b00;
+    }
     
     body {
         background-color: orange;
@@ -181,6 +203,15 @@ visited {
 
 
 @media screen and (max-width: 640px) {
+    .div768, .div980 {
+        display: none;
+    }
+    
+    .div640 {
+        display: block;
+        background-color: #0a9396;   
+    }
+    
     body {
         background-color: green;
     }
