@@ -55,9 +55,10 @@ article {
     display: block;
 
 }
+
 article > h1 {
     font-size: 2.1rem;
-    border-bottom: 1px solid #444;
+
 }
 
 article img {
@@ -118,6 +119,47 @@ input[type=text], input[type="email"], label, button {
 textarea {
     width: 80%;
 }
+
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin: 2rem;
+    max-width: 800px;
+    background-color: #fff;
+ 
+}
+.portfolio-list-header {
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.portfolio-list article {
+    flex: 40%;
+    max-width: 40%;
+    border: 1px solid ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+
+}
+.portfolio-list article img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+
+.portfolio-list article h1 {
+    
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+
 
 @media screen and (max-width: 980px) {
     

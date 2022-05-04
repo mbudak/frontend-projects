@@ -1,0 +1,34 @@
+@use "../partials/variables" as v;
+
+.alert {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 5px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.alert-primary {
+    background-color: v.$primary-color;
+    color: #fff;
+}
+
+.alert-secondary {
+    background-color: v.$secondary-color;
+    color: #fff;
+}
+
+.alert-success {
+    background-color: v.$success-color;
+}
+
+.alert-danger {
+    background-color: v.$danger-color;
+}
+.alert-warning {
+    background-color: v.$warning-color;
+}
+.alert-info {
+    background-color: v.$info-color;
+}

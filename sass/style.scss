@@ -1,0 +1,28 @@
+@use "./components/buttons";
+@use "./components/alerts";
+
+@use "./partials/variables" as v;
+
+h1 {
+    color: v.$primary-color;
+}
+
+.item-list {
+    display: flex;
+    // border: 1px solid $primary-color;
+    border-radius: 8px;
+    padding: 0 10px;
+
+    h1 {
+        color: v.$primary-color;
+    }
+
+    p {
+        background-color: beige;
+    }
+
+    article {
+        flex-grow: 50%;
+    }
+}
+
