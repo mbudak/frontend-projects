@@ -5,8 +5,8 @@
 @use "./partials/variables" as v;
 
 body {
-    padding: 0;
-    border: 1px solid red;
+    margin: 10px;
+    
 }
 h1 {
     color: v.$primary-color;
