@@ -57,6 +57,7 @@
 
 .alert-danger {
   background-color: #e63946;
+  color: #fff;
 }
 
 .alert-warning {
