@@ -68,6 +68,11 @@
   background-color: #94d2bd;
 }
 
+body {
+  padding: 0;
+  border: 1px solid red;
+}
+
 h1 {
   color: #0077b6;
 }
@@ -85,4 +90,22 @@ h1 {
 }
 .item-list article {
   flex-grow: 50%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #fff;
+}
+nav ul li {
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+nav ul li {
+  background-color: #0077b6;
+  padding: 0 10px;
 }/*# sourceMappingURL=style.css.map */

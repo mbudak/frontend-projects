@@ -1,8 +1,13 @@
+@use "./base/reset" as r;
 @use "./components/buttons";
 @use "./components/alerts";
 
 @use "./partials/variables" as v;
 
+body {
+    padding: 0;
+    border: 1px solid red;
+}
 h1 {
     color: v.$primary-color;
 }
@@ -26,3 +31,12 @@ h1 {
     }
 }
 
+
+  nav ul {
+    @include r.horizontal-list;
+    color: #fff;
+  }
+  nav ul li {
+      background-color: v.$primary-color;
+      padding: 0 10px;
+  }
