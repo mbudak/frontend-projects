@@ -23,3 +23,4 @@ function gameplay() {
     }
     holes[randomHoleIndex].classList.toggle('mole');
 }
+
