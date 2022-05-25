@@ -1,3 +1,13 @@
 * {
   box-sizing: border-box;
 }
+
+.user-line {
+  display: block;
+  border: 1px solid #444;
+  background-color: #ececec;
+}
+
+.post {
+  padding-left: 20px;
+}
