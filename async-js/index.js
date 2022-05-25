@@ -4,7 +4,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(result => result.json())
     .then((data) => {
         data.forEach(user => {
-            userlist.innerHTML += `<div class="user-line" id="user_${user.id}">${user.id} : ${user.name} / ${user.email}</div>` + 
+            userlist.innerHTML += `<div class="user-line" id="user_${user.id}">uid: [${user.id}] ${user.name} | ${user.email}</div>` + 
             `<div class="post" id="userposts_${user.id}"><!-- placeholder --></div>`
             fetchPostsByUserId(user.id)
         });
@@ -19,7 +19,7 @@ fetch('https://jsonplaceholder.typicode.com/posts?userId=' + uid)
         pdata.forEach(post => {
             
             user_posts.innerHTML += `<div>
-                <h4>:: ${post.title}</h4>
+                <div class="post-title">:: ${post.title}</div>
                 <pre>${post.body}</pre>
                 </div>`
             
