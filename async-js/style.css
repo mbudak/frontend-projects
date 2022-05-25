@@ -5,7 +5,8 @@
 .user-line {
   display: block;
   border: 1px solid #444;
-  background-color: #ececec;
+  background-color: #8ecae6;
+  color: #003049;
   font-size: 1.4rem;
   font-weight: 800;
 }
@@ -22,5 +23,6 @@ pre {
 
 .post-title {
   color: maroon;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  border-bottom: 1px dashed #6a040f;
 }
