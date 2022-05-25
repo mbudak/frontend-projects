@@ -1,8 +1,5 @@
 var userlist = document.getElementById('userlist');
 
-
-
-
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(result => result.json())
     .then((data) => {
@@ -22,7 +19,7 @@ fetch('https://jsonplaceholder.typicode.com/posts?userId=' + uid)
         pdata.forEach(post => {
             
             user_posts.innerHTML += `<div>
-                <h4>${post.title}</h4>
+                <h4>:: ${post.title}</h4>
                 <pre>${post.body}</pre>
                 </div>`
             

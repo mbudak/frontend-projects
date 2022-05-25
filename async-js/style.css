@@ -6,8 +6,16 @@
   display: block;
   border: 1px solid #444;
   background-color: #ececec;
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .post {
   padding-left: 20px;
+}
+
+pre {
+  background-color: #f5ebe0;
+  padding: 10px;
+  border-radius: 8px;
 }
