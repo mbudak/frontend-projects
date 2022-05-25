@@ -6,10 +6,12 @@
   display: block;
   border: 1px solid #444;
   background-color: #8ecae6;
-  color: #003049;
+  color: #caf0f8;
   font-size: 1.4rem;
   font-weight: 800;
   padding: 10px 20px;
+  background: rgb(0,119,182);
+  background: linear-gradient(0deg, rgba(0,119,182,1) 43%, rgba(33,125,167,1) 43%, rgba(202,240,248,1) 100%);
   
 }
 
