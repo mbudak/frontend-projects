@@ -39,11 +39,24 @@ console.log('car Mercedes -> ', mercedes.make, mercedes.speed);
 
 // Challenge 1
 // class oop
-public class CarCl(make, speed){
+class CarCl {
     constructor(make, speed){
         this.make = make;
         this.speed = speed;
     }
 
+    get speedUS() {
+        return this.speed / 1.6;
+    }
+    set speedUS(paramSpeed) {
+        this.speed = paramSpeed * 1.6;
+    }
 }
+
+
+const c1Car = new CarCl('Ford', 120);
+console.log(`Car is ${c1Car.make}, speed is ${c1Car.speed} speedUS is ${c1Car.speedUS}`);
+c1Car.speedUS = 80;
+console.log(`New Car SpeedUS is set by 80 and km result is ${c1Car.speed}`);
+
 
