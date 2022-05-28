@@ -61,7 +61,7 @@ console.log(`New Car SpeedUS is set by 80 and km result is ${c2Car.speed}`);
 
 
 
-// Challenge : 3
+// Challenge : 4
 class eCar extends es6Car {
     constructor(make, speed, charge) {
         super(make, speed, charge);
@@ -90,3 +90,30 @@ tesla.Breake();
 console.log('Tesla stopped', tesla.speed);
 
 
+// Challenge 4
+class EVCl extends es6Car{
+    // private property
+    #charge;
+
+    constructor(make, speed) {
+        super(make, speed);
+        this.#charge = 100;
+    }
+
+    set chargeTo(ct) {
+        this.charge += ct;
+    }
+    
+    Accelerate(acc) {
+        this.speed += acc;
+    }
+
+    Breake(){
+        this.speed = 0;
+    }
+
+}
+
+const rivian = new EVCl('Rivian', 120, 23);
+
+console.log('Rivian', rivian);
