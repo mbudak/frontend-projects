@@ -37,9 +37,9 @@ console.log('car bmw stopped', bmw.speed);
 console.log('car Mercedes -> ', mercedes.make, mercedes.speed);
 
 
-// Challenge 1
+// Challenge 2
 // class oop
-class CarCl {
+class es6Car {
     constructor(make, speed){
         this.make = make;
         this.speed = speed;
@@ -54,9 +54,39 @@ class CarCl {
 }
 
 
-const c1Car = new CarCl('Ford', 120);
-console.log(`Car is ${c1Car.make}, speed is ${c1Car.speed} speedUS is ${c1Car.speedUS}`);
-c1Car.speedUS = 80;
-console.log(`New Car SpeedUS is set by 80 and km result is ${c1Car.speed}`);
+const c2Car = new es6Car('Ford', 120);
+console.log(`Car is ${c2Car.make}, speed is ${c2Car.speed} speedUS is ${c2Car.speedUS}`);
+c2Car.speedUS = 80;
+console.log(`New Car SpeedUS is set by 80 and km result is ${c2Car.speed}`);
+
+
+
+// Challenge : 3
+class eCar extends es6Car {
+    constructor(make, speed, charge) {
+        super(make, speed, charge);
+        this.charge = charge;
+    }
+
+    set chargeTo(ct) {
+        this.charge += ct;
+    }
+    
+    Accelerate(acc) {
+        this.speed += acc;
+    }
+
+    Breake(){
+        this.speed = 0;
+    }
+}
+const tesla = new eCar('Tesla', 120, 23);
+console.log('tesla', tesla);
+tesla.chargeTo = 47;
+console.log('Tesla charged 47 more -> ', tesla.charge);
+tesla.Accelerate(20);
+console.log('Tesla accelerated by 20', tesla.speed);
+tesla.Breake();
+console.log('Tesla stopped', tesla.speed);
 
 
