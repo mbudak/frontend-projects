@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    console.log('dom is ready')
+});
+
 // Challenge 1
 // function OOP
 function Car(make, speed) {
@@ -117,3 +121,4 @@ class EVCl extends es6Car{
 const rivian = new EVCl('Rivian', 120, 23);
 
 console.log('Rivian', rivian);
+
