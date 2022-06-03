@@ -5,12 +5,12 @@ const todoInput = document.querySelector('#todo');
 const clearBtn = document.querySelector('#clearBtn');
 const search = document.querySelector('#search');
 
-// Load all event listners
-allEventListners();
+// Load all event listeners
+allEventListeners();
 
 
-// Functions of all event listners
-function allEventListners() {
+// Functions of all event listeners
+function allEventListeners() {
     // Add todo event
     form.addEventListener('submit', addTodo);
     // Remove and complete todo event
