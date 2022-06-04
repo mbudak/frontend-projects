@@ -5,6 +5,13 @@ const todoInput = document.querySelector('#todo');
 const clearBtn = document.querySelector('#clearBtn');
 const search = document.querySelector('#search');
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    
+    // localStorage.setItem('todoList', )
+});
+
+
 // Load all event listeners
 allEventListeners();
 
@@ -80,7 +87,7 @@ function clearTodoList() {
 
 
 // Search todo function
-function searchTodo(e) {
+function searchTodo(e) {    
     const text = e.target.value.toLowerCase();
     const allItem = document.querySelectorAll('.list-group-item');
     for (let task of allItem) {
