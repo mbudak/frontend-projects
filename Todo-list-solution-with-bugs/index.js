@@ -21,24 +21,54 @@ class itemsStorage {
         itemsData.push(item);
         localStorage.setItem('itemsData', itemsData);
     }
+
+    saveItems() {
+        const allItem = document.querySelectorAll('.list-group-item');
+        itemsData = [];
+        for (let task of allItem) {
+            itemsData.push(task.textContent);
+            localStorage.setItem('itemsData', itemsData);
+        };
+    }
+
     clearItems() {
         itemsData = [];
         localStorage.setItem('itemsData', itemsData);
     }
+    
 }
 
 const items = new itemsStorage();
+
+function addToUI(item) {
+    // Create li element
+    const li = document.createElement('li');
+    // Add class
+    li.className = 'list-group-item';
+    // Add complete and remove icon
+    li.innerHTML = `<i class="far fa-square done-icon"></i>
+                    <i class="far fa-check-square done-icon"></i>
+                    <span class="todo-text">${item}</span>
+                    <i class="far fa-trash-alt"></i>`;
+    // Create span element
+    const span = document.createElement('span');
+    
+
+    // Append span to li
+    li.appendChild(span);
+    // Append li to ul (todoList)
+    todoList.appendChild(li);
+}
 
 
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
     itemsData = items.list.split(',');
     itemsData.forEach(item => {
-        console.log('item :', item);
+        addToUI(item);
     });
     
 });
-
 
 // Load all event listeners
 allEventListeners();
@@ -73,6 +103,8 @@ function addTodo(e) {
         // Create span element
         const span = document.createElement('span');
         
+        // store it
+        items.addItem(todoInput.value);
 
         // Append span to li
         li.appendChild(span);
@@ -95,6 +127,7 @@ function removeTodo(e) {
     if (e.target.classList.contains('fa-trash-alt')) {
         if (confirm('Are you sure')) {
             e.target.parentElement.remove();
+            items.saveItems();
         }
     }
 
@@ -111,7 +144,7 @@ function removeTodo(e) {
 // Clear or remove all todos function
 function clearTodoList() {
     todoList.innerHTML = '';
-    
+    items.clearItems();
 }
 
 
