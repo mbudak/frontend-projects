@@ -4,11 +4,39 @@ const form = document.querySelector('#form');
 const todoInput = document.querySelector('#todo');
 const clearBtn = document.querySelector('#clearBtn');
 const search = document.querySelector('#search');
+var itemsData = [];
+
+
+class itemsStorage {
+    constructor() {
+        // if we need 
+    }
+
+    get list() {
+        var test = localStorage.getItem('itemsData');
+        return test;
+    }
+
+    addItem(item) {       
+        itemsData.push(item);
+        localStorage.setItem('itemsData', itemsData);
+    }
+    clearItems() {
+        itemsData = [];
+        localStorage.setItem('itemsData', itemsData);
+    }
+}
+
+const items = new itemsStorage();
+
 
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
+    itemsData = items.list.split(',');
+    itemsData.forEach(item => {
+        console.log('item :', item);
+    });
     
-    // localStorage.setItem('todoList', )
 });
 
 
@@ -32,6 +60,7 @@ function allEventListeners() {
 // Add todo item function
 function addTodo(e) {
     if (todoInput.value !== '') {
+        
         // Create li element
         const li = document.createElement('li');
         // Add class
@@ -39,13 +68,12 @@ function addTodo(e) {
         // Add complete and remove icon
         li.innerHTML = `<i class="far fa-square done-icon"></i>
                         <i class="far fa-check-square done-icon"></i>
+                        <span class="todo-text">${todoInput.value}</span>
                         <i class="far fa-trash-alt"></i>`;
         // Create span element
         const span = document.createElement('span');
-        // Add class
-        span.className = 'todo-text';
-        // Create text node and append to span
-        span.appendChild(document.createTextNode(todoInput.value));
+        
+
         // Append span to li
         li.appendChild(span);
         // Append li to ul (todoList)
@@ -83,6 +111,7 @@ function removeTodo(e) {
 // Clear or remove all todos function
 function clearTodoList() {
     todoList.innerHTML = '';
+    
 }
 
 
