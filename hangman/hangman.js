@@ -81,3 +81,4 @@ class Hangman {
         document.body.style.border = `20px solid #219ebc`;
     }
 }
+
